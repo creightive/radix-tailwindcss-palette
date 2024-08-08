@@ -24,7 +24,7 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	plugins: [colors.plugin],
+  plugins: [colors.plugin],
 };
 ```
 
@@ -45,16 +45,16 @@ const radixColors = require("@radix-ui/colors");
 const { createPlugin } = require("windy-radix-palette");
 
 const colors = createPlugin({
-	colors: {
-		mauveA: radixColors.mauveA,
-		mauveDarkA: radixColors.mauveDarkA,
-		red: radixColors.red,
-		redDark: radixColors.redDark,
-	},
+  colors: {
+    mauveA: radixColors.mauveA,
+    mauveDarkA: radixColors.mauveDarkA,
+    red: radixColors.red,
+    redDark: radixColors.redDark,
+  },
 });
 
 module.exports = {
-	plugins: [colors.plugin],
+  plugins: [colors.plugin],
 };
 ```
 
@@ -72,24 +72,24 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	theme: {
-		extend: {
-			colors: {
-				danger: {
-					1: colors.alias("red.1"),
-					2: colors.alias("red.2"),
-				},
-				warning: {
-					1: colors.alias("yellow.1"),
-					2: colors.alias("yellow.2"),
-				},
-				success: {
-					1: colors.alias("green.1"),
-					2: colors.alias("green.2"),
-				},
-			},
-		},
-	},
+  theme: {
+    extend: {
+      colors: {
+        danger: {
+          1: colors.alias("red.1"),
+          2: colors.alias("red.2"),
+        },
+        warning: {
+          1: colors.alias("yellow.1"),
+          2: colors.alias("yellow.2"),
+        },
+        success: {
+          1: colors.alias("green.1"),
+          2: colors.alias("green.2"),
+        },
+      },
+    },
+  },
 };
 ```
 
@@ -103,15 +103,15 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	theme: {
-		extend: {
-			colors: {
-				danger: colors.alias("red"),
-				warning: colors.alias("yellow"),
-				success: colors.alias("green"),
-			},
-		},
-	},
+  theme: {
+    extend: {
+      colors: {
+        danger: colors.alias("red"),
+        warning: colors.alias("yellow"),
+        success: colors.alias("green"),
+      },
+    },
+  },
 };
 ```
 
@@ -121,10 +121,10 @@ This will make `danger-1` map to `red-1`, `danger-2` map to `red-2`, etc.
 
 > When designing for both light and dark modes, you sometimes need to map a variable to one color in light mode, and another color in dark mode. Common examples include:
 >
-> -   Components that have a white background in light mode and a subtle gray background in dark mode. For example, Card, Popover, DropdownMenu, HoverCard, Dialog etc.
-> -   Components that have a transparent black background in light mode and a transparent white background in dark mode. For example, Tooltip.
-> -   Shadows that are saturated, transparent gray in light mode, and pure black in dark mode.
-> -   An overlay that is light transparent black in light mode, and a darker transparent black in dark mode.
+> - Components that have a white background in light mode and a subtle gray background in dark mode. For example, Card, Popover, DropdownMenu, HoverCard, Dialog etc.
+> - Components that have a transparent black background in light mode and a transparent white background in dark mode. For example, Tooltip.
+> - Shadows that are saturated, transparent gray in light mode, and pure black in dark mode.
+> - An overlay that is light transparent black in light mode, and a darker transparent black in dark mode.
 >
 > — [Radix Colors](https://www.radix-ui.com/colors/docs/overview/aliasing#mutable-aliases)
 
@@ -134,28 +134,28 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	theme: {
-		extend: {
-			colors: {
-				panel: colors.alias({
-					light: "white",
-					dark: "slate.2",
-				}),
-				"panel-contrast": colors.alias({
-					light: "blackA.9",
-					dark: "whiteA.9",
-				}),
-				shadow: colors.alias({
-					light: "slateA.3",
-					dark: "black",
-				}),
-				overlay: colors.alias({
-					light: "blackA.8",
-					dark: "blackA.11",
-				}),
-			},
-		},
-	},
+  theme: {
+    extend: {
+      colors: {
+        panel: colors.alias({
+          light: "white",
+          dark: "slate.2",
+        }),
+        "panel-contrast": colors.alias({
+          light: "blackA.9",
+          dark: "whiteA.9",
+        }),
+        shadow: colors.alias({
+          light: "slateA.3",
+          dark: "black",
+        }),
+        overlay: colors.alias({
+          light: "blackA.8",
+          dark: "blackA.11",
+        }),
+      },
+    },
+  },
 };
 ```
 
@@ -167,16 +167,16 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	theme: {
-		extend: {
-			colors: {
-				overlay: colors.alias({
-					light: "blackA",
-					dark: "whiteA",
-				}),
-			},
-		},
-	},
+  theme: {
+    extend: {
+      colors: {
+        overlay: colors.alias({
+          light: "blackA",
+          dark: "whiteA",
+        }),
+      },
+    },
+  },
 };
 ```
 
@@ -190,16 +190,16 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	theme: {
-		extend: {
-			colors: {
-				surface: colors.alias({
-					light: "hsla(0, 0%, 100%, 0.9)",
-					dark: "rgba(0, 0, 0, 0.25)",
-				}),
-			},
-		},
-	},
+  theme: {
+    extend: {
+      colors: {
+        surface: colors.alias({
+          light: "hsla(0, 0%, 100%, 0.9)",
+          dark: "rgba(0, 0, 0, 0.25)",
+        }),
+      },
+    },
+  },
 };
 ```
 
@@ -217,17 +217,17 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	theme: {
-		extend: {
-			colors: {
-				surface: colors.alias({
-					name: "surface",
-					light: "hsla(0, 0%, 100%, 0.9)",
-					dark: "rgba(0, 0, 0, 0.25)",
-				}),
-			},
-		},
-	},
+  theme: {
+    extend: {
+      colors: {
+        surface: colors.alias({
+          name: "surface",
+          light: "hsla(0, 0%, 100%, 0.9)",
+          dark: "rgba(0, 0, 0, 0.25)",
+        }),
+      },
+    },
+  },
 };
 ```
 
@@ -245,11 +245,11 @@ This is partially an opinionated decision (the Radix Colors are hand-picked with
 const { createPlugin } = require("windy-radix-palette");
 
 const colors = createPlugin({
-	opacitySupport: true,
+  opacitySupport: true,
 });
 
 module.exports = {
-	plugins: [colors.plugin],
+  plugins: [colors.plugin],
 };
 ```
 
@@ -267,11 +267,11 @@ By default, this plugin will add CSS properties to the `:root` CSS [pseudo-class
 const { createPlugin } = require("windy-radix-palette");
 
 const colors = createPlugin({
-	rootSelector: ":host",
+  rootSelector: ":host",
 });
 
 module.exports = {
-	plugins: [colors.plugin],
+  plugins: [colors.plugin],
 };
 ```
 
@@ -279,8 +279,8 @@ module.exports = {
 
 The colors in this palette will automatically switch to the light/dark variant based on your Tailwind dark mode settings:
 
--   When `darkMode` is not set, or is set to `'media'`, the palette will change based on the user's preferred color scheme ([`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme))
--   When `darkMode` is set to `'class'`, the palette will change based on the presence of the dark mode selector (defaults to `.dark`), note that you can [customize the dark mode selector](https://tailwindcss.com/docs/dark-mode#customizing-the-class-name) if required
+- When `darkMode` is not set, or is set to `'media'`, the palette will change based on the user's preferred color scheme ([`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme))
+- When `darkMode` is set to `'class'`, the palette will change based on the presence of the dark mode selector (defaults to `.dark`), note that you can [customize the dark mode selector](https://tailwindcss.com/docs/dark-mode#customizing-the-class-name) if required
 
 ## Typography
 
@@ -302,8 +302,8 @@ const { createPlugin } = require("windy-radix-palette");
 const colors = createPlugin();
 
 module.exports = {
-	plugins: [colors.plugin, require("@tailwindcss/typography")],
-	presets: [require("windy-radix-typography")],
+  plugins: [colors.plugin, require("@tailwindcss/typography")],
+  presets: [require("windy-radix-typography")],
 };
 ```
 
@@ -344,50 +344,48 @@ Here is one way you can use Radix Colors with Tailwind, without this plugin:
 
 ```js
 module.exports = {
-	// ...
-	theme: {
-		extend: {
-			colors: {
-				slate: {
-					1: "var(--slate-1)",
-					2: "var(--slate-2)",
-					3: "var(--slate-3)",
-					4: "var(--slate-4)",
-					5: "var(--slate-5)",
-					6: "var(--slate-6)",
-					7: "var(--slate-7)",
-					8: "var(--slate-8)",
-					9: "var(--slate-9)",
-					10: "var(--slate-10)",
-					11: "var(--slate-11)",
-					12: "var(--slate-12)",
-				},
-				slateA: {
-					1: "var(--slate-a1)",
-					2: "var(--slate-a2)",
-					3: "var(--slate-a3)",
-					4: "var(--slate-a4)",
-					5: "var(--slate-a5)",
-					6: "var(--slate-a6)",
-					7: "var(--slate-a7)",
-					8: "var(--slate-a8)",
-					9: "var(--slate-a9)",
-					10: "var(--slate-a10)",
-					11: "var(--slate-a11)",
-					12: "var(--slate-a12)",
-				},
-			},
-		},
-	},
+  // ...
+  theme: {
+    extend: {
+      colors: {
+        slate: {
+          1: "var(--slate-1)",
+          2: "var(--slate-2)",
+          3: "var(--slate-3)",
+          4: "var(--slate-4)",
+          5: "var(--slate-5)",
+          6: "var(--slate-6)",
+          7: "var(--slate-7)",
+          8: "var(--slate-8)",
+          9: "var(--slate-9)",
+          10: "var(--slate-10)",
+          11: "var(--slate-11)",
+          12: "var(--slate-12)",
+        },
+        slateA: {
+          1: "var(--slate-a1)",
+          2: "var(--slate-a2)",
+          3: "var(--slate-a3)",
+          4: "var(--slate-a4)",
+          5: "var(--slate-a5)",
+          6: "var(--slate-a6)",
+          7: "var(--slate-a7)",
+          8: "var(--slate-a8)",
+          9: "var(--slate-a9)",
+          10: "var(--slate-a10)",
+          11: "var(--slate-a11)",
+          12: "var(--slate-a12)",
+        },
+      },
+    },
+  },
 };
 ```
 
 #### 3. Use colors in your markup
 
 ```html
-<button class="dark:bg-slate-1 hover:bg-slate-5 text-slateA-12 bg-white">
-	Button
-</button>
+<button class="dark:bg-slate-1 hover:bg-slate-5 text-slateA-12 bg-white">Button</button>
 ```
 
 My reason for originally creating this plugin was to generate a version of the Radix Colors `.css` files that used the `.dark` selector, instead of `.dark-mode`, which used to be the only selector used by Radix Colors for dark mode at the time.
@@ -398,4 +396,4 @@ Nowadays, Radix Colors dark mode actually also uses the `.dark` selector as well
 
 ## Prior Art
 
--   [Radix UI](https://github.com/radix-ui)
+- [Radix UI](https://github.com/radix-ui)

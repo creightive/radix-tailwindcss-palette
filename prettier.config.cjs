@@ -1,8 +1,7 @@
 module.exports = {
-	tabWidth: 4,
-	useTabs: true,
-	plugins: [
-		require.resolve("prettier-plugin-astro"),
-		require.resolve("prettier-plugin-tailwindcss"),
-	],
+  arrowParens: "avoid",
+  tabWidth: 2,
+  useTabs: false,
+  trailingComma: "es5",
+  plugins: [require.resolve("prettier-plugin-astro"), require.resolve("prettier-plugin-tailwindcss")],
 };
